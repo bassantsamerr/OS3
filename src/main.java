@@ -1,11 +1,24 @@
+import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
-
 public class main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        JFrame frame= new JFrame();
+        JPanel panel= new JPanel();
+        GridBagConstraints gridBagConstraints= new GridBagConstraints();
+        gridBagConstraints.fill=GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets=new Insets(15,5,5,5);
+        frame.add(panel);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        panel.setLayout(new GridLayout());
+        //panel.setBackground(new Color(0,255,255));
+        //frame.pack();
+        frame.setSize(880,880);
         ArrayList<SJF> sjf = new ArrayList<SJF>();
+        Scanner sc = new Scanner(System.in);
         while (true) {
             System.out.println("1)Priority 2)SJF 3)SRTF 4)AGAT 5)exit");
             int choice = sc.nextInt();
