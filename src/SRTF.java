@@ -150,6 +150,15 @@ class SRTF {
 
     public void print()
     {
+        System.out.print('\n');
+        System.out.println("The Processes execution order");
+
+        for (int i = 0; i < Processes_execution_order.size(); i++){
+            System.out.print(Processes_execution_order.get(i).name + "  ");
+        }
+        System.out.print('\n');
+        System.out.print('\n');
+
         ArrayList <process> temp = new ArrayList<>();
         for (int i = 0; i < Processes_execution_order.size(); i++)
         {
